@@ -29,7 +29,6 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 
 # [Optional] Uncomment this line to install global node packages.
 # https://gitmoji.dev/
-RUN su vscode -c "source /usr/local/share/nvm/nvm.sh &&\
-                                         npm install -g \
-                                         gitmoji \
-                                         " 2>&1
+RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g \
+                                                        gitmoji-cli \
+                                                        " 2>&1
