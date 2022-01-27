@@ -18,7 +18,7 @@ This repository is organized as follows:
 ./ # File tree from the project's root folder.
 │
 │   # Contains development environment configuration settings.
-├── .devcontainer/ 
+├── .devcontainer/
 │   ├── devcontainer.json
 │   └── Dockerfile
 │
@@ -49,7 +49,7 @@ This repository is organized as follows:
 
 ## Getting Started
 
-With the goals of *reproducible* research in mind, we have documented our procedure for setting up and preparing a local development environment for verifying our solution and findings. Described below are different guides on setting up aspects of the project and can serve as starting points for more complex usage of the code.
+With the goals of _reproducible_ research in mind, we have documented our procedure for setting up and preparing a local development environment for verifying our solution and findings. Described below are different guides on setting up aspects of the project and can serve as starting points for more complex usage of the code.
 
 ## Setting up your local development environment with...
 
@@ -65,6 +65,8 @@ You may want to do one of the following to render `.tex` files:
 - Use a containerized environment to generate `.tex` files.
 
 > :memo: **Note**: You may find great benefit in following one of the [alternative methods listed here](https://towardsdatascience.com/three-ways-to-create-dockernized-latex-environment-2534163ee0c4#3fca).
+
+Our reports make use of the [Association for Computing Machinery (ACM)][acm]'s [ACM Conference Proceedings Primary Article Template][acm.template]. The $\LaTeX$ template depends on the special [`acmart` package, which you can read about here][acmart].
 
 ## Setting up your local environment with `.devcontainer/`
 
@@ -90,14 +92,14 @@ The container that VS Code will start for you will give you access to the follow
 - [`TexLive`](https://www.tug.org/texlive/)
   - Installs `texlive-latex-base`, `texlive-latex-recommended`, `texlive-pictures`, and `texlive-fonts-recommended` for processing `LaTeX` documents like our written deliverables.
 - [`Node`][node]
-  - [`gitmoji-cli`](https://github.com/carloscuesta/gitmoji-cli) (*npm hosted plugin*).
+  - [`gitmoji-cli`](https://github.com/carloscuesta/gitmoji-cli) (_npm hosted plugin_).
 
 [You can read more about this container image from the official maintainers, Microsoft][java.container].
 
 > :memo: **Note**: Although we are currently using Microsoft's build of OpenJDK 17, we can easily swap this out for another vendor's image and keep integration by forking their [their open-source dockerfiles](https://github.com/microsoft/vscode-dev-containers/blob/main/containers/java/.devcontainer/base.Dockerfile).
 
 > :memo: **About Containers**: Containers allow us to standardize working environments, isolate dependency installations between projects, and package software for future deployment. They also have the side effect of being self-documenting methods for writing, maintaining, and sharing _reproducible_ data science projects ([Nüst, et al., 2020][writing.dockerfiles]).
-> 
+>
 > [You can read more about containers here][.containers]. [`Docker`][docker] is one type of container software format. Alternative forms such as [podman][podman.io] also exist.
 
 ### Starting your `.devcontainer`
@@ -152,3 +154,6 @@ licensed under a [MPL-2.0](LICENSE) license.
 [java17]: https://www.microsoft.com/openjdk
 [gradle]: https://gradle.org/
 [node]: https://nodejs.org/en/
+[acm]: https://www.acm.org/publications/authors/submissions
+[acm.template]: https://www.overleaf.com/latex/templates/acm-conference-proceedings-primary-article-template/wbvnghjbzwpc
+[acmart]: https://www.acm.org/binaries/content/assets/publications/consolidated-tex-template/acmart.pdf
