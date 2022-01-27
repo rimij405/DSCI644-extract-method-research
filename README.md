@@ -1,8 +1,8 @@
-```yaml
+---
 course: "DSCI 644"
 group: "Group 7"
 project: "Extract Method Refactor Research"
-```
+---
 
 ## Overview
 
